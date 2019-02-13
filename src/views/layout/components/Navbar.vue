@@ -1,11 +1,8 @@
 <template>
   <el-menu class="navbar" mode="horizontal">
-    <hamburger 
-    :toggle-click="toggleSideBar" 
-    :is-active="sidebar.opened" 
-    class="hamburger-container"/>
+    <hamburger :toggle-click="toggleSideBar" :is-active="sidebar.opened" class="hamburger-container"/>
     <el-dropdown class="avatar-container" trigger="click">
-      <span>{{ name }}</span>
+      <span>{{ name }}<i class="el-icon-arrow-down el-icon--right"></i></span>
       <el-dropdown-menu slot="dropdown" class="user-dropdown">
         <router-link class="inlineBlock" to="/">
           <el-dropdown-item>
@@ -39,7 +36,7 @@ export default {
       this.$store.dispatch('ToggleSideBar')
     },
     logout() {
-      this.$store.dispatch('LogOut').then(() => {
+      this.$store.dispatch('FedLogOut').then(() => {
         location.reload() // 为了重新实例化vue-router对象 避免bug
       })
     }

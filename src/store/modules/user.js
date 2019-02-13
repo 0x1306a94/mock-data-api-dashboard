@@ -50,7 +50,6 @@ const user = {
           // } else {
           //   reject('getInfo: roles must be a non-null array !')
           // }
-          console.log('tag', data)
           commit('SET_ROLES', [])
           commit('SET_NAME', data.name)
           commit('SET_AVATAR', data.avatar)
