@@ -2,7 +2,7 @@
   <el-menu class="navbar" mode="horizontal">
     <hamburger :toggle-click="toggleSideBar" :is-active="sidebar.opened" class="hamburger-container"/>
     <el-dropdown class="avatar-container" trigger="click">
-      <span>{{ name }}<i class="el-icon-arrow-down el-icon--right"></i></span>
+      <span>{{ name }}<i class="el-icon-arrow-down el-icon--right"/></span>
       <el-dropdown-menu slot="dropdown" class="user-dropdown">
         <router-link class="inlineBlock" to="/">
           <el-dropdown-item>
