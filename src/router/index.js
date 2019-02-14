@@ -7,7 +7,8 @@ import Router from 'vue-router'
 Vue.use(Router)
 
 /* Layout */
-import Layout from '../views/layout/Layout'
+import Layout from '@/views/layout/Layout'
+import ProjectHome from '@/views/project/index'
 
 /**
 * hidden: true                   if `hidden:true` will not show in the sidebar(default is false)
@@ -51,27 +52,15 @@ export const constantRouterMap = [
   {
     path: '/project',
     component: Layout,
-    redirect: '/project/all',
+    redirect: '/project/home',
     name: 'project',
     meta: { title: '项目', icon: 'project' },
     children: [
       {
-        path: 'all',
-        name: 'all',
-        component: () => import('@/views/project/index'),
-        meta: { title: '所有项目', icon: 'all-project' }
-      },
-      {
-        path: 'enable',
-        name: 'enable',
-        component: () => import('@/views/project/index'),
-        meta: { title: '启用项目', icon: 'all-project' }
-      },
-      {
-        path: 'disable',
-        name: 'disable',
-        component: () => import('@/views/project/index'),
-        meta: { title: '禁用项目', icon: 'all-project' }
+        path: 'home',
+        name: 'project-home',
+        component: ProjectHome,
+        meta: { title: '项目', icon: 'all-project' }
       }
     ]
   },
