@@ -1,3 +1,34 @@
+// module.exports = {
+//   extends: [
+//     'eslint-config-alloy/vue',
+//     'plugin:vue/recommended',
+//      'eslint:recommended'
+//   ],
+//   globals: {
+//     // 这里填入你的项目需要的全局变量
+//     // 这里值为 false 表示这个全局变量不允许被重新赋值，比如：
+//     //
+//     // Vue: false
+//   },
+//   rules: {
+//     // 这里填入你的项目需要的个性化配置，比如：
+//     //
+//     // // @fixable 一个缩进必须用两个空格替代
+//     'indent': [
+//         'error',
+//         2,
+//         {
+//             SwitchCase: 1,
+//             flatTernaryExpressions: true
+//         }
+//     ],
+//     // 去除分号
+//     semi: ['error', 'never'],
+//     "vue/no-use-v-if-with-v-for": ["error", {
+//       "allowUsingIterationVar": true
+//     }]
+//   }
+// };
 module.exports = {
   root: true,
   parserOptions: {

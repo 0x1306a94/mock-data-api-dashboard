@@ -58,7 +58,7 @@ export default {
       },
       loading: false,
       pwdType: 'password',
-      redirect: undefined
+      redirect: null
     }
   },
   watch: {
